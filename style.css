@@ -1,0 +1,90 @@
+/* Fondo general con un degradado llamativo y moderno */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+p {
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px 16px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Cuadrícula del juego */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    gap: 12px;
+    justify-content: center;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Diseño de las cartas (Boca abajo) */
+.card {
+    width: 75px;
+    height: 75px;
+    font-size: 2.2rem;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 12px;
+    user-select: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card.flipped {
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    border: 3px solid #ffeb3b;
+    box-shadow: 0 0 12px rgba(255, 235, 59, 0.6);
+    transform: rotateY(180deg);
+}
+
+/* Botones de Reiniciar e Instalar */
+#btnRestart, #btnInstall {
+    background: #ffeb3b;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#btnRestart:hover, #btnInstall:hover {
+    background: #fdd835;
+    transform: scale(1.05);
+}
